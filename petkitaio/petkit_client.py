@@ -61,7 +61,7 @@ class PetKitClient:
 
         self.username: str = username
         self.password: str = password
-        self.base_url: Region = Region.US
+        self.base_url: Region = Region.ASIA
         self._session: ClientSession = session if session else ClientSession()
         self.tz: str = get_localzone_name()
         self.timeout: int = timeout
