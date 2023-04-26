@@ -4,8 +4,9 @@ from .str_enum import StrEnum
 
 class Region(StrEnum):
 
-    US = 'http://api.petkt.com/latest'
-    CN = 'http://api.petkit.cn/6'
+    US = 'https://api.petkt.com/latest'
+    CN = 'https://api.petkit.cn/6'
+    ASIA = 'https://api.petktasia.com/latest'
 
 
 class Endpoint(StrEnum):
