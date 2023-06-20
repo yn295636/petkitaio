@@ -31,6 +31,7 @@ class Endpoint(StrEnum):
     MINI_SETTING = '/feedermini/update'
     PET_PROPS = '/pet/updatepetprops'
     REFRESH_HOME = '/discovery/refreshHome'
+    REPLENISHED_FOOD = '/added'
     SOUND_LIST = '/soundList'
     STATISTIC = '/statistic'
     UNIT = '/app/saveunit'
@@ -43,7 +44,9 @@ class FeederSetting(StrEnum):
     CHILD_LOCK = 'manualLock'
     DISPENSE_TONE = 'feedSound'
     DO_NOT_DISTURB = 'disturbMode'
+    FEED_TONE = 'feedTone'
     INDICATOR_LIGHT = 'lightMode'
+    MIN_EAT_DURATION = 'shortest'
     MINI_CHILD_LOCK = 'settings.manualLock'
     MINI_INDICATOR_LIGHT = 'settings.lightMode'
     SELECTED_SOUND = 'selectedSound'
@@ -227,7 +230,7 @@ SERVER_ERROR_CODES = {
 }
 
 BLE_HEADER = [-6, -4, -3]
-FEEDER_LIST = ['D3', 'D4', 'FeederMini']
+FEEDER_LIST = ['D3', 'D4', 'D4s', 'FeederMini']
 LITTER_LIST = ['T3', 'T4']
 WATER_FOUNTAIN_LIST = ['W5']
 
