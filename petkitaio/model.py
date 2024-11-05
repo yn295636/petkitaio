@@ -14,6 +14,8 @@ class PetKitData:
     litter_boxes: Optional[dict[int, Any]] = None
     water_fountains: Optional[dict[int, W5Fountain]] = None
     pets: Optional[dict[int, Pet]] = None
+    purifiers: Optional[dict[int, Purifier]] = None
+
 
 @dataclass
 class Feeder:
@@ -23,6 +25,8 @@ class Feeder:
     data: dict[str, Any]
     type: str
     sound_list: Optional[dict[int, str]] = None
+    last_manual_feed_id: Optional[str] = None
+
 
 @dataclass
 class LitterBox:
@@ -34,7 +38,17 @@ class LitterBox:
     statistics: dict[str, Any]
     type: str
     manually_paused: bool
-    manual_pause_end: datetime | None
+    manual_pause_end: Optional[datetime] = None
+
+
+@dataclass
+class Purifier:
+    """Dataclass for PetKit Purifiers."""
+
+    id: int
+    device_detail: dict[str, Any]
+    type: str
+
 
 @dataclass
 class W5Fountain:
@@ -43,7 +57,9 @@ class W5Fountain:
     id: int
     data: dict[str, Any]
     type: str
+    group_relay: bool
     ble_relay: Optional[int] = None
+
 
 @dataclass
 class Pet:
